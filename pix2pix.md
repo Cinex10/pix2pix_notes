@@ -34,7 +34,7 @@ The first term encourages the discriminator to correctly classify real samples a
 
 To clearly understand the diffrence between **GAN** and **cGAN** :
 
-$$\mathcal{L}{\text{GAN}}\left(G, D\right) = \mathbb{E}{y}\left[\log D\left(y\right)\right] + \mathbb{E}_{x,z}\left[\log\left(1 - D\left(G\left(x, z\right)\right)\right)\right]$$
+$$\mathcal{L}_{\text{GAN}}\left(G, D\right) = \mathbb{E}{y}\left[\log D\left(y\right)\right] + \mathbb{E}_{x,z}\left[\log\left(1 - D\left(G\left(x, z\right)\right)\right)\right]$$
 *<center>1. The objectif function of cGAN* </center>
 
 
@@ -55,22 +55,3 @@ The generator network requires that all information flow pass through all the la
 </a>
 
 *<center>2. Two choices for the architecture of the generator* </center>
-
-
-
-
-
-**The Cauchy-Schwarz Inequality**
-$$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
-
-
-$$
-\mathcal{L}_{\text{GAN}}(G, D) = \mathbb{E}_{y}[\log D(y)] + \mathbb{E}_{x,z}[\log(1 - D(G(x, z)))]
-$$
-
-$$\mathcal{L}$$
-
-$$\mathcal{L}_{\text{GAN}}(G, D)$$
-
-$$\mathbb{E}_{y}[\log D(y)] + \mathbb{E}_{x,z}[\log(1 - D(G(x, z)))]$$
-  
