@@ -26,9 +26,7 @@ both the generator and discriminator observe the input edge map.
 
 ### Objective :
 
-$$
- \mathcal{L}_{\text{cGAN}}(G, D) = \mathbb{E}_{x,y}[\log D(x, y)] + \mathbb{E}_{x,z}[\log(1 - D(x, G(x, z)))]  
-$$
+$$\mathcal{L}_{\text{cGAN}}(G, D) = \mathbb{E}_{x,y}[\log D(x, y)] + \mathbb{E}_{x,z}[\log(1 - D(x, G(x, z)))]  $$
 <center>1. The objectif function of cGAN</center>
 
 
