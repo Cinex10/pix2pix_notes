@@ -51,7 +51,19 @@ In initial expirement, they use a **Gaussian noise**, but the generator learned 
 Instead for there final model, they yse noise in the forme of dropout layers.
 
 ### Generator with skips :
-The generator network requires that all information flow pass through all the layers, including the bottleneck (U-Net architecture). For many image translation problems, there is a great deal of low-level information shared between the input and output, and it would be desirable to shuttle this information directly across the net. For example, in the case of image colorization, the input and output share the location of prominent edges. This is goal of the skips in the U-Net architecture.
+The generator network requires that all information flow pass through all the layers, including the bottleneck (The middle and the smallest layer of the network). For many image translation problems, there is a great deal of low-level information shared between the input and output, and it would be desirable to shuttle this information directly across the net. For example, in the case of image colorization, the input and output share the location of prominent edges. This is goal of the skips in the U-Net architecture.
+<a href="url">
+<center>
+<img src="images/u-net.png" height="auto" width="auto"  style="border-radius:10px">
+</center>
+</a>
+
+*<center>2. Two choices for the architecture of the generator* </center>
+
+
+
+
+
 
 
 
