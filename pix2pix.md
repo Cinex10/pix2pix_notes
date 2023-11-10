@@ -70,6 +70,9 @@ $$
 \mathcal{L}_{\text{GAN}}(G, D) = \mathbb{E}_{y}[\log D(y)] + \mathbb{E}_{x,z}[\log(1 - D(G(x, z)))]
 $$
 
-$$\mathcal{L}$$
+$$\mathcal{L}
+
+\mathcal{L}_{\text{GAN}}(G, D)
+$$
 
   
