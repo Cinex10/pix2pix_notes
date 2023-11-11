@@ -47,13 +47,13 @@ Instead for there final model, they yse noise in the forme of dropout layers.
 
 ### Generator with skips :
 The generator network requires that all information flow pass through all the layers, including the bottleneck (The middle and the smallest layer of the network). For many image translation problems, there is a great deal of low-level information shared between the input and output, and it would be desirable to shuttle this information directly across the net. For example, in the case of image colorization, the input and output share the location of prominent edges. This is goal of the skips in the U-Net architecture.
+<p align='center'>
 <a href="url">
-<center>
 <img src="images/u-net.png" height="auto" width="auto"  style="border-radius:10px">
-</center>
 </a>
+</p>
 
-*<center>2. Two choices for the architecture of the generator* </center>
+<p align='center'>2. Two choices for the architecture of the generator* </p>
 
 ### Markovian discriminator (PatchGAN) :
 We already know the fact that L1 and L2 losses can effictively capture [low frequency compononet](#low-frequency-components-global-structure), this motivates restricting GAN descriminator to only model [high-frequency components](#high-frequency-components-fine-details). Therefore, we design a PatchGAN discriminator architecture.
