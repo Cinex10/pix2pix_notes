@@ -56,7 +56,7 @@ The generator network requires that all information flow pass through all the la
 *<p align='center'>3. Two choices for the architecture of the generator </p>*
 
 ### Markovian discriminator (PatchGAN) :
-We already know the fact that L1 and L2 losses can effictively capture [low frequency compononet](#low-frequency-components-global-structure), this motivates restricting GAN descriminator to only model [high-frequency components](#high-frequency-components-fine-details). Therefore, we design a PatchGAN discriminator architecture.
+We already know the fact that $L1$ and $L2$ losses can effictively capture [low frequency compononet](#low-frequency-components-global-structure), this motivates restricting GAN descriminator to only model [high-frequency components](#high-frequency-components-fine-details). Therefore, we design a PatchGAN discriminator architecture. This discriminator tries to classify if each $N × N$ patch in an image is real or fake. We run this discriminator convolutionally across the image, averaging all responses to provide the ultimate output of $D$ .
 
 **Note :**
 In a PatchGAN discriminator, instead of producing a single output for the entire input image, the network classifies each patch or local region of the image independently. This approach helps capture more fine-grained details and enables the discriminator to provide feedback on the realism of local image structures. The generator, in turn, can focus on generating realistic details at the patch level.
