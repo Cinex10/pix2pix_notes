@@ -12,7 +12,7 @@ The goal is to tell CNN what wish it to minimize (carefully choosing a loss func
 
  
 #### Example
-if we choose to minimize the euclidean distance between the pixels of original image (ground truth) and the generated images it will tend to produce blurry results, because L2 loss tend to minimize the average diffrence between pixels which will ignore high-frequency components  [high-frequency components](#high-frequency-components-fine-details).
+if we choose to minimize the euclidean distance between the pixels of original image (ground truth) and the generated images it will tend to produce blurry results, because L2 loss tend to minimize the average diffrence between pixels which will [high-frequency components](#high-frequency-components-fine-details).
 
 **The Objective** is to specify a high frequency goal to get a realistic image with fine details.
 
@@ -54,3 +54,9 @@ The generator network requires that all information flow pass through all the la
 </a>
 
 *<center>2. Two choices for the architecture of the generator* </center>
+
+### Markovian discriminator (PatchGAN) :
+We already know the fact that L1 and L2 losses can effictively capture [low frequency compononet](#low-frequency-components-global-structure), this motivates restricting GAN descriminator to only model [high-frequency components](#high-frequency-components-fine-details). Therefore, we design a PatchGAN discriminator architecture.
+
+**Note :**
+In a PatchGAN discriminator, instead of producing a single output for the entire input image, the network classifies each patch or local region of the image independently. This approach helps capture more fine-grained details and enables the discriminator to provide feedback on the realism of local image structures. The generator, in turn, can focus on generating realistic details at the patch level.
