@@ -27,14 +27,14 @@ both the generator and discriminator observe the input edge map.
 ### Objective :
 
 $$\mathcal{L}_{\text{cGAN}}(G, D) = \mathbb{E}{y}\left[\log D(y)\right] + \mathbb{E}{x,z}\left[\log\left(1 - D\left(G\left(x, z\right)\right)\right)\right] $$
-<center>1. The objectif function of cGAN</center>
+<p align='center'>1. The objectif function of cGAN</p>
 
 The first term encourages the discriminator to correctly classify real samples as real (outputting 1), and the second term encourages the discriminator to correctly classify generated samples as fake (outputting 0).
 
 To clearly understand the diffrence between **GAN** and **cGAN** :
 
 $$\mathcal{L}_{\text{GAN}}\left(G, D\right) = \mathbb{E}{y}\left[\log D\left(y\right)\right] + \mathbb{E}{x,z}\left[\log\left(1 - D\left(G\left(x, z\right)\right)\right)\right]$$
-*<center>1. The objectif function of cGAN* </center>
+<p align='center'>2. The objectif function of GAN* </p>
 
 
 
@@ -53,7 +53,7 @@ The generator network requires that all information flow pass through all the la
 </a>
 </p>
 
-<p align='center'>2. Two choices for the architecture of the generator* </p>
+<p align='center'>3. Two choices for the architecture of the generator* </p>
 
 ### Markovian discriminator (PatchGAN) :
 We already know the fact that L1 and L2 losses can effictively capture [low frequency compononet](#low-frequency-components-global-structure), this motivates restricting GAN descriminator to only model [high-frequency components](#high-frequency-components-fine-details). Therefore, we design a PatchGAN discriminator architecture.
